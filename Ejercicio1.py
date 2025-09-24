@@ -3,7 +3,9 @@
 numero = int(input("Introduce un numero"))
 
 def parimpar(numero):
+
     par = False
+    
     if(numero % 2== 0):
         par = True
     
