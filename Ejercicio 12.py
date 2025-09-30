@@ -1,8 +1,9 @@
 def calculator (number1,number2,operator):
-    
+
     calculator = 0
 
     match operator:
+        
         case 1:
             calculator = number1+number2
 
