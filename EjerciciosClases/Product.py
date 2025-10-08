@@ -1,9 +1,9 @@
 class Product:
 
-    def __init__(self,name,price,quantity):
-        
-        self.iva = 0.21
+    IVA = 21
 
+    def __init__(self,name,price,quantity):
+    
         self.name = name
 
         self.price = price
@@ -12,11 +12,11 @@ class Product:
 
     def getPvP(self):
 
-        return self.price + self.price * self.iva
+        return self.price + self.price * self.IVA
     
     def getPvPDescuento(self, discount):
         
-        totalPrice = self.price + self.price * self.iva 
+        totalPrice = self.price + self.price * self.IVA
         
         return totalPrice - (totalPrice *discount/100)
     
@@ -54,7 +54,7 @@ class Product:
         
         minor = False
         
-        if (self.name == otherObject.name):
+        if (self.name < otherObject.name):
             
             minor = True
             

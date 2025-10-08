@@ -1,22 +1,24 @@
 class Animal:
     
-    def __init__(self, name):
+    def __init__(self, name, legNumber):
         
         self.name = name
 
+        self.legNumber = legNumber
+
     def talk (self):
         
-        return " "
+        return ""
     
     def __str__(self):
         
-        return "my name is " + self.name + " i have x legs and my sound is this: "
+        return "My name is " + self.name + " i have " + str(self.legNumber) + " legs " + "this is my sound:" + self.talk()
 
 class Dog(Animal):
     
-    def __init__(self, name):
+    def __init__(self, name,legNumber):
         
-        super().__init__(name)
+        super().__init__(name, legNumber)
     
     def talk(self):
         return super().talk() + "Wof woff"
@@ -26,9 +28,9 @@ class Dog(Animal):
 
 class Cat(Animal):
     
-    def __init__(self, name):
+    def __init__(self, name, legNumber):
         
-        super().__init__(name)
+        super().__init__(name, legNumber)
     
     def talk(self):
         return super().talk() + "Miauuu"
@@ -38,14 +40,17 @@ class Cat(Animal):
 
 class Main:
     
-    dog1 = Dog("Nube")
+    dog1 = Dog("Nube" , 4)
     
-    cat1 = Cat("Phosqui")
+    cat1 = Cat("Phosqui", 4)
     
     print(dog1.talk())
     
     print(dog1)
-    
+
+    print(cat1)
+
+    print(cat1.talk())    
     
         
         
